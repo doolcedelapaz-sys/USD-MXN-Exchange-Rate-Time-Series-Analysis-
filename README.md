@@ -54,20 +54,16 @@ The bootstrap forecast, which resamples historical standardized residuals, produ
 
 Overall, the similarity of the three forecasts provides strong evidence that the estimated GARCH(1,1) specification delivers stable and reliable short-term volatility predictions for the USD/MXN exchange rate.
 
-## Statistical Framework
+## Chapter 1 — Model Variables and Macroeconomic Indicators
+| Component | Equation |
+|-----------|----------|
+| Dependent Variable | $USDMXN_t$ |
+| CPI Inflation Rate | $\pi_t=\frac{CPI_t-CPI_{t-1}}{CPI_{t-1}}\times100$ |
+| Interest Rate Differential | $IRD_t=i_{US,t}-i_{MX,t}$ |
+| Exchange Rate Change | $\Delta S_t=S_t-S_{t-1}$ |
 
-| Model Component | Mathematical Representation |
-|-----------------|----------------------------|
-| Logarithmic Returns | $r_t=\ln\left(\frac{P_t}{P_{t-1}}\right)$ |
-| Conditional Mean | $r_t=\varepsilon_t$ |
-| Error Term | $\varepsilon_t=\sigma_t z_t$ |
-| Innovation Distribution | $z_t\sim t_{\nu}$ |
-| GARCH(1,1) Process | $\sigma_t^2=\omega+\alpha\varepsilon_{t-1}^2+\beta\sigma_{t-1}^2$ |
-| Estimated Variance Equation | $\sigma_t^2=0.0167+0.1122\varepsilon_{t-1}^2+0.8651\sigma_{t-1}^2$ |
-| Volatility Persistence | $\alpha+\beta=0.9773$ |
-| Long-Run Variance | $\sigma_{LR}^{2}=\frac{\omega}{1-\alpha-\beta}$ |
-| Student-t Degrees of Freedom | $\nu=7.7984$ |
-| Forecast Horizon | $h=1,\ldots,5$ |
+
+
 
 
 
