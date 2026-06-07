@@ -44,3 +44,12 @@ For data engineering purposes, Mexican CPI data was collected beginning in 2007 
 | Monetary Policy | Banxico Interest Rate | Banxico API | Daily / Policy Updates |
 | Economic Activity | Industrial Production Index (Mexico) | FRED | Monthly |
 | Inflation | Consumer Price Index (Mexico) | FRED | Monthly |
+
+## 3 types of forecasting (Chapter 4)
+The analytical forecast shows a gradual increase in expected volatility from 0.4775 to 0.4952 over the five-day horizon. This behavior reflects the high persistence estimated in the GARCH model and indicates that volatility shocks are expected to remain relevant in the short run.
+
+The simulation forecast, based on 1,000 Monte Carlo paths, yields results almost identical to the analytical forecast. This close agreement suggests that the model's theoretical dynamics adequately capture the evolution of volatility and that simulation uncertainty is relatively small.
+
+The bootstrap forecast, which resamples historical standardized residuals, produces slightly more irregular forecasts. Unlike the analytical and simulation methods, the bootstrap approach incorporates historical shock patterns directly from the data, resulting in small fluctuations across forecast horizons. Nevertheless, the overall forecast level remains very close to the other two approaches.
+
+Overall, the similarity of the three forecasts provides strong evidence that the estimated GARCH(1,1) specification delivers stable and reliable short-term volatility predictions for the USD/MXN exchange rate.
