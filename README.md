@@ -53,3 +53,18 @@ The simulation forecast, based on 1,000 Monte Carlo paths, yields results almost
 The bootstrap forecast, which resamples historical standardized residuals, produces slightly more irregular forecasts. Unlike the analytical and simulation methods, the bootstrap approach incorporates historical shock patterns directly from the data, resulting in small fluctuations across forecast horizons. Nevertheless, the overall forecast level remains very close to the other two approaches.
 
 Overall, the similarity of the three forecasts provides strong evidence that the estimated GARCH(1,1) specification delivers stable and reliable short-term volatility predictions for the USD/MXN exchange rate.
+
+
+| Component         | Equation                                                           |
+| ----------------- | ------------------------------------------------------------------ |
+| Log Return        | (r_t=\ln(P_t/P_{t-1}))                                             |
+| Zero Mean         | (r_t=\varepsilon_t)                                                |
+| GARCH(1,1)        | (\sigma_t^2=\omega+\alpha\varepsilon_{t-1}^2+\beta\sigma_{t-1}^2)  |
+| Estimated GARCH   | (\sigma_t^2=0.0167+0.1122\varepsilon_{t-1}^2+0.8651\sigma_{t-1}^2) |
+| Persistence       | (\alpha+\beta=0.9773)                                              |
+| Long-run Variance | (\sigma^2_{LR}=\omega/(1-\alpha-\beta))                            |
+| Student-t Errors  | (\varepsilon_t\sim t_{7.7984})                                     |
+| Forecast Horizon  | (h=1,\ldots,5)                                                     |
+
+
+
