@@ -59,8 +59,65 @@ Overall, the similarity of the three forecasts provides strong evidence that the
 |-----------|----------|
 | Dependent Variable | $USDMXN_t$ |
 | CPI Inflation Rate | $\pi_t=\frac{CPI_t-CPI_{t-1}}{CPI_{t-1}}\times100$ |
-| Interest Rate Differential | $IRD_t=i_{US,t}-i_{MX,t}$ |
 | Exchange Rate Change | $\Delta S_t=S_t-S_{t-1}$ |
+
+## Chapter 2 — Data Cleaning and Transformation
+
+| Component | Equation |
+|-----------|----------|
+| Forward Fill | $x_t=x_{t-1}$ |
+| Backward Fill | $x_t=x_{t+1}$ |
+| Linear Interpolation | $x_t=x_0+\frac{t-t_0}{t_1-t_0}(x_1-x_0)$ |
+| Simple Return | $R_t=\frac{P_t-P_{t-1}}{P_{t-1}}$ |
+| Log Return | $r_t=\ln\left(\frac{P_t}{P_{t-1}}\right)$ |
+
+## Chapter 3 — Exploring Financial Time Series Data
+
+| Component | Equation |
+|-----------|----------|
+| Correlation Coefficient | $\rho_{XY}=\frac{Cov(X,Y)}{\sigma_X\sigma_Y}$ |
+| Sample Mean | $\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i$ |
+| Sample Variance | $s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2$ |
+| Skewness | $Skew=\frac{1}{n}\sum\left(\frac{x_i-\bar{x}}{s}\right)^3$ |
+| Kurtosis | $Kurt=\frac{1}{n}\sum\left(\frac{x_i-\bar{x}}{s}\right)^4$ |
+| Jarque-Bera Test | $JB=\frac{n}{6}\left(S^2+\frac{(K-3)^2}{4}\right)$ |
+
+## Chapter 4 — Volatility Modeling with GARCH(1,1)
+
+| Component | Equation |
+|-----------|----------|
+| Zero Mean Process | $r_t=\varepsilon_t$ |
+| Error Process | $\varepsilon_t=\sigma_t z_t$ |
+| Student-t Innovations | $z_t\sim t_{\nu}$ |
+| GARCH(1,1) Variance | $\sigma_t^2=\omega+\alpha\varepsilon_{t-1}^2+\beta\sigma_{t-1}^2$ |
+| Estimated GARCH Model | $\sigma_t^2=0.0167+0.1122\varepsilon_{t-1}^2+0.8651\sigma_{t-1}^2$ |
+| Volatility Persistence | $\alpha+\beta=0.9773$ |
+| Long-Run Variance | $\sigma_{LR}^{2}=\frac{\omega}{1-\alpha-\beta}$ |
+
+## Chapter 5 — Monte Carlo Simulation and Risk Analysis
+
+| Component | Equation |
+|-----------|----------|
+| Monte Carlo Estimator | $E[X]\approx\frac{1}{N}\sum_{i=1}^{N}X_i$ |
+| Cholesky Decomposition | $\Sigma=LL^{T}$ |
+| Geometric Brownian Motion | $dS_t=\mu S_tdt+\sigma S_tdW_t$ |
+| Discrete GBM | $S_{t+\Delta t}=S_te^{(\mu-\frac{1}{2}\sigma^2)\Delta t+\sigma\sqrt{\Delta t}Z}$ |
+| Value-at-Risk (95%) | $VaR_{95}=\mu-1.645\sigma$ |
+| Value-at-Risk (99%) | $VaR_{99}=\mu-2.326\sigma$ |
+| Expected Shortfall | $ES_{\alpha}=E[X\mid X\le VaR_{\alpha}]$ |
+
+## Chapter 6 — Stationarity and Time Series Diagnostics
+
+| Component | Mathematical Representation |
+|-----------|----------------------------|
+| ADF Null Hypothesis | $H_0:$ Unit Root Exists |
+| ADF Alternative Hypothesis | $H_1:$ Series is Stationary |
+| ADF Regression | $\Delta y_t=\alpha+\beta t+\gamma y_{t-1}+\sum\delta_i\Delta y_{t-i}+\varepsilon_t$ |
+| KPSS Null Hypothesis | $H_0:$ Series is Stationary |
+| KPSS Alternative Hypothesis | $H_1:$ Series has Unit Root |
+| Autocorrelation Function (ACF) | $\rho_k=\frac{Cov(X_t,X_{t-k})}{Var(X_t)}$ |
+| Partial Autocorrelation Function (PACF) | $PACF(k)=Corr(X_t,X_{t-k}\mid X_{t-1},...,X_{t-k+1})$ |
+
 
 
 
