@@ -1,3 +1,4 @@
+# USD/MXN Exchange Rate Time Series Analysis duraing Crisis (2008-2024)
 ## Overview
 This project develops a macro-financial forecasting framework for the USD/MXN exchange rate using  GARCH models in Python.
 
@@ -124,7 +125,12 @@ Overall, the similarity of the three forecasts provides strong evidence that the
 2. The U.S. Dollar Strengthened Over the Past Week: Recent U.S. economic data came in stronger than expected, leading markets to speculate that the Federal Reserve could maintain a more restrictive monetary stance for longer. This provided support for the U.S. dollar globally.
 3. The Mexican Peso Remains Relatively Strong: The USD/MXN exchange rate has recently traded in a range of approximately 17.20 to 17.50, very close to the level you mentioned (17.47). Some analysts view 17.50 as an important resistance level.
 4. Remittances and Peso Strength: The appreciation of the peso has reduced the purchasing power of remittances when converted into Mexican pesos, which has become a topic of recent economic analysis and discussion.
-   
+
+
+## Author
+Dulce De La Paz Ortiz
+Quant Finance and Economist 
+Mexico City, Mexico 
 
 
 
