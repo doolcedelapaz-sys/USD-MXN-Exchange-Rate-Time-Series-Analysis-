@@ -120,7 +120,7 @@ Overall, the similarity of the three forecasts provides strong evidence that the
 | Partial Autocorrelation Function (PACF) | $PACF(k)=Corr(X_t,X_{t-k}\mid X_{t-1},...,X_{t-k+1})$ |
 
 
-## Recent USD/MXN News (June 2026)
+## Recent USD/MXN News (May 2026)
 1. Banxico Is Near the End of Its Rate-Cutting Cycle: Banxico lowered its benchmark interest rate to 6.50% in May 2026 but signaled that the easing cycle may be approaching its end. This is generally supportive for the peso because it helps preserve the interest-rate differential relative to the United States.
 2. The U.S. Dollar Strengthened Over the Past Week: Recent U.S. economic data came in stronger than expected, leading markets to speculate that the Federal Reserve could maintain a more restrictive monetary stance for longer. This provided support for the U.S. dollar globally.
 3. The Mexican Peso Remains Relatively Strong: The USD/MXN exchange rate has recently traded in a range of approximately 17.20 to 17.50, very close to the level you mentioned (17.47). Some analysts view 17.50 as an important resistance level.
